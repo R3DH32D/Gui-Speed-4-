@@ -59,7 +59,6 @@
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(100, 23);
             this.txtFirst.TabIndex = 1;
-            this.txtFirst.Text = "0";
             this.txtFirst.TextChanged += new System.EventHandler(this.txtFirst_TextChanged);
             // 
             // txtResult
@@ -75,7 +74,6 @@
             this.txtSecond.Name = "txtSecond";
             this.txtSecond.Size = new System.Drawing.Size(100, 23);
             this.txtSecond.TabIndex = 3;
-            this.txtSecond.Text = "0";
             this.txtSecond.TextChanged += new System.EventHandler(this.txtSecond_TextChanged);
             // 
             // cmbFirstType
@@ -109,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(359, 167);
             this.Controls.Add(this.cmbResultType);
             this.Controls.Add(this.cmbSecondType);

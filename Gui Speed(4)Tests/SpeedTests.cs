@@ -86,8 +86,8 @@ namespace Gui_Speed_4_.Tests
             Assert.AreEqual("100 м/с", (ms > kmh).Verbose());
             Assert.AreEqual("100 м/с", (kmh > ms).Verbose());
 
-            Assert.AreEqual("100 м/с", (kmh < ms).Verbose());
-            Assert.AreEqual("100 м/с", (ms < kmh).Verbose());
+            Assert.AreEqual("1 км/ч", (kmh < ms).Verbose());
+            Assert.AreEqual("1 км/ч", (ms < kmh).Verbose());
         }
     }
 }

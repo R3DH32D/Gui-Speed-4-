@@ -41,39 +41,50 @@ namespace Gui_Speed_4_
         {
             return new Speed(instance.value + number, instance.type); ;
         }
-        public static Speed operator +(double number, Speed instance)
-        {
-            return instance + number;
-        }
+        
         public static Speed operator +(Speed instance1, Speed instance2)
         {
-            return new Speed(instance1.value + instance2.To(instance1.type).value, instance1.type); ;
+            
+            if (instance1.value >= instance2.value) 
+            {
+                return new Speed(instance1.value + instance2.To(instance1.type).value, instance1.type); ;
+            }
+            else
+            {
+                return new Speed(instance1.To(instance1.type).value + instance2.value, instance2.type); ;
+            }
+            
         }
         public static Speed operator *(Speed instance, double number)
         {
             
             return new Speed(instance.value * number, instance.type); ;
         }
-
-        public static Speed operator *(double number, Speed instance)
-        {
-            return instance * number;
-        }
         public static Speed operator *(Speed instance1, Speed instance2)
         {
-            return new Speed(instance1.value * instance2.To(instance1.type).value, instance1.type); ;
+            if (instance1.value >= instance2.value)
+            {
+                return new Speed(instance1.value * instance2.To(instance1.type).value, instance1.type); ;
+            }
+            else
+            {
+                return new Speed(instance1.To(instance1.type).value * instance2.value, instance2.type); ;
+            }
         }
         public static Speed operator -(Speed instance, double number)
         {
             return new Speed(instance.value - number, instance.type); ;
         }
-        public static Speed operator -(double number, Speed instance)
-        {
-            return instance - number;
-        }
         public static Speed operator -(Speed instance1, Speed instance2)
         {
-            return new Speed(instance1.value - instance2.To(instance1.type).value, instance1.type); ;
+            if (instance1.value >= instance2.value)
+            {
+                return new Speed(instance1.value - instance2.To(instance1.type).value, instance1.type); ;
+            }
+            else
+            {
+                return new Speed(instance1.To(instance1.type).value - instance2.value, instance2.type); ;
+            }
         }
         public Speed To(MeasureType newType)
         {
@@ -143,13 +154,13 @@ namespace Gui_Speed_4_
             Speed outPut;
             if (instance1.value > instance2.To(instance1.type).value)
             {
-                outPut = instance1;
+                outPut = instance2;
             }
             else if (instance1.value < instance2.To(instance1.type).value)
             {
-                outPut = instance2;
+                outPut = instance1;
             }
-            else { outPut = instance1; }
+            else { outPut = instance2; }
             return outPut;
         }
     }
