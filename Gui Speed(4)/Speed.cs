@@ -47,7 +47,7 @@ namespace Gui_Speed_4_
         }
         public static Speed operator +(Speed instance1, Speed instance2)
         {
-            return new Speed(instance1.value + instance2.value, instance1.type); ;
+            return new Speed(instance1.value + instance2.To(instance1.type).value, instance1.type); ;
         }
         public static Speed operator *(Speed instance, double number)
         {
@@ -61,7 +61,7 @@ namespace Gui_Speed_4_
         }
         public static Speed operator *(Speed instance1, Speed instance2)
         {
-            return new Speed(instance1.value * instance2.value, instance1.type); ;
+            return new Speed(instance1.value * instance2.To(instance1.type).value, instance1.type); ;
         }
         public static Speed operator -(Speed instance, double number)
         {
@@ -73,7 +73,7 @@ namespace Gui_Speed_4_
         }
         public static Speed operator -(Speed instance1, Speed instance2)
         {
-            return new Speed(instance1.value - instance2.value, instance1.type); ;
+            return new Speed(instance1.value - instance2.To(instance1.type).value, instance1.type); ;
         }
         public Speed To(MeasureType newType)
         {

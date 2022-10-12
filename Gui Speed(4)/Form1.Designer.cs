@@ -50,6 +50,7 @@
             this.cmbOperation.Name = "cmbOperation";
             this.cmbOperation.Size = new System.Drawing.Size(63, 23);
             this.cmbOperation.TabIndex = 0;
+            this.cmbOperation.Text = "+";
             this.cmbOperation.SelectedIndexChanged += new System.EventHandler(this.cmbOperation_SelectedIndexChanged);
             // 
             // txtFirst
