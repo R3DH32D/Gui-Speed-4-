@@ -17,8 +17,6 @@ namespace Gui_Speed_4_
             "Мах.",
             "Уз.",
             };
-
-            
             cmbFirstType.DataSource = new List<string>(measureItems);
             cmbSecondType.DataSource = new List<string>(measureItems);
             cmbResultType.DataSource = new List<string>(measureItems);
@@ -95,35 +93,29 @@ namespace Gui_Speed_4_
             }
             catch (FormatException)
             {
-                
+                MessageBox.Show("Неверный ввод!!!");
             }
         }
-
         private void txtFirst_TextChanged(object sender, EventArgs e)
         {
                 Calculate();
         }
-
         private void txtSecond_TextChanged(object sender, EventArgs e)
         {
                 Calculate();
         }
-
         private void cmbOperation_SelectedIndexChanged(object sender, EventArgs e)
         {
             Calculate();
         }
-
         private void cmbFirstType_SelectedIndexChanged(object sender, EventArgs e)
         {
             Calculate();
         }
-
         private void cmbSecondType_SelectedIndexChanged(object sender, EventArgs e)
         {
             Calculate();
         }
-
         private void cmbResultType_SelectedIndexChanged(object sender, EventArgs e)
         {
             Calculate();

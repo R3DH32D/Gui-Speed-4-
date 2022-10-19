@@ -59,6 +59,7 @@
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(100, 23);
             this.txtFirst.TabIndex = 1;
+            this.txtFirst.Text = "0";
             this.txtFirst.TextChanged += new System.EventHandler(this.txtFirst_TextChanged);
             // 
             // txtResult
@@ -67,6 +68,7 @@
             this.txtResult.Name = "txtResult";
             this.txtResult.Size = new System.Drawing.Size(192, 23);
             this.txtResult.TabIndex = 2;
+            this.txtResult.Text = "0";
             // 
             // txtSecond
             // 
@@ -74,6 +76,7 @@
             this.txtSecond.Name = "txtSecond";
             this.txtSecond.Size = new System.Drawing.Size(100, 23);
             this.txtSecond.TabIndex = 3;
+            this.txtSecond.Text = "0";
             this.txtSecond.TextChanged += new System.EventHandler(this.txtSecond_TextChanged);
             // 
             // cmbFirstType

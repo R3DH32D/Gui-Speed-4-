@@ -44,32 +44,15 @@ namespace Gui_Speed_4_
         
         public static Speed operator +(Speed instance1, Speed instance2)
         {
-            
-            if (instance1.value >= instance2.value) 
-            {
-                return new Speed(instance1.value + instance2.To(instance1.type).value, instance1.type); ;
-            }
-            else
-            {
-                return new Speed(instance1.To(instance1.type).value + instance2.value, instance2.type); ;
-            }
-            
+                return new Speed(instance1.value + instance2.To(instance1.type).value, instance1.type); ; 
         }
         public static Speed operator *(Speed instance, double number)
         {
-            
             return new Speed(instance.value * number, instance.type); ;
         }
         public static Speed operator *(Speed instance1, Speed instance2)
         {
-            if (instance1.value >= instance2.value)
-            {
                 return new Speed(instance1.value * instance2.To(instance1.type).value, instance1.type); ;
-            }
-            else
-            {
-                return new Speed(instance1.To(instance1.type).value * instance2.value, instance2.type); ;
-            }
         }
         public static Speed operator -(Speed instance, double number)
         {
@@ -77,14 +60,7 @@ namespace Gui_Speed_4_
         }
         public static Speed operator -(Speed instance1, Speed instance2)
         {
-            if (instance1.value >= instance2.value)
-            {
                 return new Speed(instance1.value - instance2.To(instance1.type).value, instance1.type); ;
-            }
-            else
-            {
-                return new Speed(instance1.To(instance1.type).value - instance2.value, instance2.type); ;
-            }
         }
         public Speed To(MeasureType newType)
         {
